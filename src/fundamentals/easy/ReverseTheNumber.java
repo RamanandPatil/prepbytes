@@ -24,13 +24,13 @@ public class ReverseTheNumber {
         System.out.println(reverseNumber(100));
         System.out.println(reverseNumber(123));
         System.out.println(reverseNumber(12345));
-
-
     }
 
     /**
-     * @param number
-     * @return
+     * Reverses the given number and returns the reversed number
+     *
+     * @param number the number to be reversed
+     * @return the reversed number
      */
     public static int reverseNumber(int number) {
         if (number > -10 && number < 10) {
