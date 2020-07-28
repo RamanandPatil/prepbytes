@@ -14,6 +14,9 @@ public class VPattern {
     }
 
     private static void printVPattern(String letter) {
+        if (!letter.equalsIgnoreCase("v")) {
+            return;
+        }
         int rows = 5;
         int columns = 10;
         int letterCount = 1;

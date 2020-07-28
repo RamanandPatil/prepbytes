@@ -13,6 +13,8 @@ public class SorcererSequence {
         for (int i = 0; i < tests; i++) {
             int number = scanner.nextInt();
             printSorcererSequence(number);
+            System.out.println();
+            printSorcererSequenceRecursive(number);
         }
     }
 
