@@ -8,9 +8,11 @@ import java.util.Scanner;
  */
 public class VPattern {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String letter = scanner.next();
-        printVPattern(letter);
+        // Scanner scanner = new Scanner(System.in);
+        // String letter = scanner.next();
+        printVPattern("V");
+        System.out.println();
+        printVPattern();
     }
 
     private static void printVPattern(String letter) {
@@ -19,19 +21,37 @@ public class VPattern {
         }
         int rows = 5;
         int columns = 10;
-        int letterCount = 1;
 
         for (int i = 1; i <= rows; i++) {
-            for (int j = 1; j < columns; j++) {
-                if (j <= letterCount) {
+            for (int j = 1; j <= columns; j++) {
+                if (j <= i) {
                     System.out.print(j);
-                } else if (j >= columns - letterCount) {
-                    System.out.print(columns - j);
+                } else if (j >= columns - i + 1) {
+                    System.out.print(columns - j + 1);
                 } else {
                     System.out.print(" ");
                 }
             }
-            letterCount++;
+            System.out.println();
+        }
+    }
+
+    private static void printVPattern() {
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= 5; j++) {
+                if (j <= i) {
+                    System.out.print(j);
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            for (int j = 5; j >= 1; j--) {
+                if (j <= i) {
+                    System.out.print(j);
+                } else {
+                    System.out.print(" ");
+                }
+            }
             System.out.println();
         }
     }
